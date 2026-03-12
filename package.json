@@ -1,0 +1,23 @@
+{
+  "name": "playwright-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KalharaDMR/TODO_APP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KalharaDMR/TODO_APP/issues"
+  },
+  "homepage": "https://github.com/KalharaDMR/TODO_APP#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}

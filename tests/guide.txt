@@ -1,0 +1,11 @@
+backend - node server.js
+frontend - npm run dev
+
+
+install playwright  - npx playwright install
+Run - npx playwright test
+
+Run with UI:
+npx playwright test --ui
+
+Generate Test Report  - npx playwright show-report

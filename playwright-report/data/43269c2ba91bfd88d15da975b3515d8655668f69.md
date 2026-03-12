@@ -1,0 +1,106 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e5]:
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - heading " TaskFlow" [level=1] [ref=e8]:
+        - generic [ref=e9]: 
+        - text: TaskFlow
+      - button "+ New Task" [ref=e10] [cursor=pointer]:
+        - generic [ref=e11]: +
+        - text: New Task
+    - button " Logout" [ref=e12] [cursor=pointer]:
+      - generic [ref=e13]: 
+      - text: Logout
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e17]: 
+      - generic [ref=e19]: Total Tasks
+    - generic [ref=e20]:
+      - generic [ref=e22]: 
+      - generic [ref=e24]: Completed
+    - generic [ref=e25]:
+      - generic [ref=e27]: 
+      - generic [ref=e29]: Pending
+    - generic [ref=e30]:
+      - generic [ref=e32]: 
+      - generic [ref=e34]: Overdue
+    - generic [ref=e35]:
+      - generic [ref=e37]: 
+      - generic [ref=e39]: Due Today
+    - generic [ref=e40]:
+      - generic [ref=e42]: 
+      - generic [ref=e43]:
+        - generic [ref=e44]: High Priority
+        - generic [ref=e45]: "0"
+  - generic [ref=e46]:
+    - generic [ref=e47]:
+      - heading " Filters" [level=4] [ref=e48]:
+        - generic [ref=e49]: 
+        - text: Filters
+      - button " Clear All" [ref=e50] [cursor=pointer]:
+        - generic [ref=e51]: 
+        - text: Clear All
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]: Status
+        - generic [ref=e55]:
+          - button " All Tasks" [ref=e56] [cursor=pointer]:
+            - generic [ref=e57]: 
+            - text: All Tasks
+          - button " Due Today" [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: 
+            - text: Due Today
+          - button " Upcoming" [ref=e60] [cursor=pointer]:
+            - generic [ref=e61]: 
+            - text: Upcoming
+          - button " Overdue" [ref=e62] [cursor=pointer]:
+            - generic [ref=e63]: 
+            - text: Overdue
+          - button " Completed" [ref=e64] [cursor=pointer]:
+            - generic [ref=e65]: 
+            - text: Completed
+          - button " Pending" [ref=e66] [cursor=pointer]:
+            - generic [ref=e67]: 
+            - text: Pending
+      - generic [ref=e68]:
+        - generic [ref=e69]: Category
+        - combobox [ref=e70]:
+          - option "All Categories" [selected]
+          - option "Work"
+          - option "Personal"
+          - option "Shopping"
+          - option "Health"
+          - option "Education"
+      - generic [ref=e71]:
+        - generic [ref=e72]: Priority
+        - combobox [ref=e73]:
+          - option "All Priorities" [selected]
+          - option "High"
+          - option "Medium"
+          - option "Low"
+  - generic [ref=e74]:
+    - generic [ref=e76]:
+      - heading " Tasks (1)" [level=3] [ref=e77]:
+        - generic [ref=e78]: 
+        - text: Tasks (1)
+      - button " Bulk Select" [ref=e80] [cursor=pointer]:
+        - generic [ref=e81]: 
+        - text: Bulk Select
+    - generic [ref=e83]:
+      - checkbox [ref=e85] [cursor=pointer]
+      - generic [ref=e86]:
+        - generic [ref=e88]: Mock Task 1
+        - generic [ref=e89]:
+          - generic [ref=e91]: 
+          - generic [ref=e92]:
+            - generic [ref=e93]: 
+            - text: Invalid Date
+          - generic [ref=e95]: 
+      - generic [ref=e96]:
+        - button "" [ref=e97] [cursor=pointer]:
+          - generic [ref=e98]: 
+        - button "" [ref=e99] [cursor=pointer]:
+          - generic [ref=e100]: 
+```
