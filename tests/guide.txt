@@ -3,6 +3,7 @@ frontend - npm run dev
 
 
 install playwright  - npx playwright install
+for bdd example - npm install @cucumber/cucumber
 Run - npx playwright test
 
 Run with UI:
