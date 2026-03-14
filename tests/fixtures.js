@@ -7,15 +7,15 @@ export const test = base.extend({
     // create user directly via API
     await request.post('http://localhost:5000/api/auth/register', {
       data: {
-        username: 'testuser',
-        password: '123456'
+        username: 'Dineth',
+        password: '20021021@Rusira'
       }
     });
 
     await page.goto('/');
 
-    await page.getByPlaceholder('Enter your username').fill('testuser');
-    await page.getByPlaceholder('Enter your password').fill('123456');
+    await page.getByPlaceholder('Enter your username').fill('Dineth');
+    await page.getByPlaceholder('Enter your password').fill('20021021@Rusira');
 
     await page.getByRole('button', { name: 'Login to Dashboard' }).click();
 

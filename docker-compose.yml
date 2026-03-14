@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: ./backend   # Points to the backend folder
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"        # Maps host port to container port (change as needed)
+    # environment:         # Add any env variables your backend needs here
+    #   - DATABASE_URL=...
+
+  frontend:
+    build: 
+      context: ./frontend  # Points to the frontend folder
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"        # Maps host port to container port (change as needed)
+    depends_on:
+      - backend            # Ensures backend starts before frontend

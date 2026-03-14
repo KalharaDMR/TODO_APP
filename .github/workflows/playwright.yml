@@ -8,7 +8,13 @@ on:
 
 jobs:
   test:
+    timeout-minutes: 60 
     runs-on: ubuntu-latest
+    
+    # 🌟 DOCKER FIX 5: Run the entire job inside the Official Playwright Docker Container!
+    # IMPORTANT: Change 'v1.42.1' to match the exactly Playwright version in your package.json
+    container:
+      image: mcr.microsoft.com/playwright:v1.58.2-jammy
 
     steps:
       - name: Checkout repository
@@ -18,12 +24,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
+      # 🌟 DOCKER FIX 6: Removed "npx playwright install --with-deps"
+      # You no longer need this step because the Docker image above comes 
+      # with all browsers and system dependencies pre-installed!
 
       - name: Run tests
         run: npx playwright test
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always() 
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30

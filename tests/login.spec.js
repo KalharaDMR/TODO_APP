@@ -10,9 +10,9 @@ test('user can register and login', async ({ page }) => {
   await page.getByRole('link', { name: 'Create free account' }).click();
 
   // register user
-  await page.getByPlaceholder('Choose a username').fill('testuser');
-  await page.getByPlaceholder('Create a password').fill('123456');
-  await page.getByPlaceholder('Confirm your password').fill('123456');
+  await page.getByPlaceholder('Choose a username').fill('testUser98');
+  await page.getByPlaceholder('Create a password').fill('20021021@Rusira');
+  await page.getByPlaceholder('Confirm your password').fill('20021021@Rusira');
 
   await page.getByRole('button', { name: 'Create Account' }).click();
 
@@ -20,8 +20,8 @@ test('user can register and login', async ({ page }) => {
   await page.waitForURL('**/');
 
   // login
-  await page.getByPlaceholder('Enter your username').fill('testuser');
-  await page.getByPlaceholder('Enter your password').fill('123456');
+  await page.getByPlaceholder('Enter your username').fill('testUser98');
+  await page.getByPlaceholder('Enter your password').fill('20021021@Rusira');
 
   await page.getByRole('button', { name: 'Login to Dashboard' }).click();
 
