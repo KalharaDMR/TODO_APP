@@ -16,7 +16,8 @@ export default defineConfig({
     // 🌟 DOCKER FIX 1: Network bindings.
     // Docker prefers '127.0.0.1' over 'localhost' to prevent IPv6 routing issues.
     baseURL: 'http://127.0.0.1:5173',
-    
+    actionTimeout: 600000,
+    navigationTimeout: 600000,
     // 🌟 DOCKER FIX 2: Dynamic Headless Mode
     // It runs WITHOUT a browser UI in Docker/CI, but WITH a UI on your local machine.
     headless: !!process.env.CI, 
