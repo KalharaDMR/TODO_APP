@@ -21,7 +21,6 @@ export default defineConfig({
     // 🌟 DOCKER FIX 2: Dynamic Headless Mode
     // It runs WITHOUT a browser UI in Docker/CI, but WITH a UI on your local machine.
     headless: !!process.env.CI, 
-    
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
   },
