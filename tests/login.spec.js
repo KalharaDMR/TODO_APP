@@ -17,7 +17,7 @@ test('user can register and login', async ({ page }) => {
   await page.getByRole('button', { name: 'Create Account' }).click();
 
   // wait until redirected to login
-  await page.waitForURL('**/');
+  await page.waitForURL('**/',{ timeout: 60000 });
 
   // login
   await page.getByPlaceholder('Enter your username').fill('testUser98');

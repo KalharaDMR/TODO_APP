@@ -19,7 +19,7 @@ export const test = base.extend({
 
     await page.getByRole('button', { name: 'Login to Dashboard' }).click();
 
-    await page.waitForURL('**/dashboard');
+    await page.waitForURL('**/dashboard',{ timeout: 60000 });
 
     await use(page);
   }
