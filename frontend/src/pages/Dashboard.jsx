@@ -46,7 +46,7 @@ function Dashboard() {
       const data = await res.json();
       setTasks(data);
     } catch (error) {
-      showAlert("error", "Failed to load tasks");
+      showAlert("error", error.message);
     }
   };
 
@@ -58,7 +58,7 @@ function Dashboard() {
       const data = await res.json();
       setStats(data);
     } catch (error) {
-      console.error("Failed to load stats");
+      console.error(error.message);
     }
   };
 

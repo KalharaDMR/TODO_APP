@@ -8,6 +8,16 @@ let page;
 Given('the user is logged in', async ({ page }) => {
   // Playwright automatically opens the browser for you!
   await page.goto('http://localhost:5173');
+  // navigate to register page
+  await page.getByRole('link', { name: 'Create free account' }).click();
+
+  // register user
+  await page.getByPlaceholder('Choose a username').fill('Rusira');
+  await page.getByPlaceholder('Create a password').fill('20021021@Rusira');
+  await page.getByPlaceholder('Confirm your password').fill('20021021@Rusira');
+
+  await page.getByRole('button', { name: 'Create Account' }).click();
+  
   await page.getByPlaceholder('Enter your username').fill('Rusira');
   await page.getByPlaceholder('Enter your password').fill('20021021@Rusira');
   await page.getByRole('button', { name: 'Login to Dashboard' }).click();

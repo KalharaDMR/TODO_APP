@@ -54,7 +54,7 @@ function TaskForm({ onTaskAdded, showAlert, token }) {
         tags: ""
       });
     } catch (error) {
-      showAlert("error", "Failed to add task");
+      showAlert("error", error.message);
     }
   };
 
