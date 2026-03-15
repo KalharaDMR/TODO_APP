@@ -27,7 +27,7 @@ function TaskForm({ onTaskAdded, showAlert, token }) {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/tasks", {
+      const res = await fetch("http://backend:5000/api/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

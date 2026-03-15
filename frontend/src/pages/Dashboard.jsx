@@ -34,7 +34,7 @@ function Dashboard() {
       if (filters.category) queryParams.append('category', filters.category);
       if (filters.priority) queryParams.append('priority', filters.priority);
 
-      const res = await fetch(`http://localhost:5000/api/tasks?${queryParams}`, {
+      const res = await fetch(`http://backend:5000/api/tasks?${queryParams}`, {
         headers: { Authorization: token },
       });
 
@@ -52,7 +52,7 @@ function Dashboard() {
 
   const loadStats = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/tasks/stats", {
+      const res = await fetch("http://backend:5000/api/tasks/stats", {
         headers: { Authorization: token },
       });
       const data = await res.json();

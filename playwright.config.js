@@ -15,7 +15,7 @@ export default defineConfig({
   use: {
     // 🌟 DOCKER FIX 1: Network bindings.
     // Docker prefers '127.0.0.1' over 'localhost' to prevent IPv6 routing issues.
-    baseURL: 'http://127.0.0.1:5173',
+    baseURL: 'http://localhost:5173',
     actionTimeout: 600000,
     navigationTimeout: 600000,
     // 🌟 DOCKER FIX 2: Dynamic Headless Mode
@@ -44,7 +44,7 @@ export default defineConfig({
     
     // 🌟 FIX: Point this to your frontend port (5173) using 127.0.0.1
     // Playwright will wait until your frontend is live before starting tests
-    url: 'http://127.0.0.1:5173', 
+    url: 'http://localhost:5173', 
     
     // Don't restart the server if it's already running locally
     reuseExistingServer: !process.env.CI,
