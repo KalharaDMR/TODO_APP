@@ -45,7 +45,7 @@ function TaskItem({ task, onTaskUpdate, showAlert, token, bulkMode, isSelected, 
 
       onTaskUpdate();
     } catch (error) {
-      showAlert("error", "Failed to update task");
+      showAlert("error", error.message);
     }
   };
 
@@ -63,7 +63,7 @@ function TaskItem({ task, onTaskUpdate, showAlert, token, bulkMode, isSelected, 
       showAlert("success", "Task deleted successfully");
       onTaskUpdate();
     } catch (error) {
-      showAlert("error", "Failed to delete task");
+      showAlert("error", error.message);
     }
   };
 
@@ -84,7 +84,7 @@ function TaskItem({ task, onTaskUpdate, showAlert, token, bulkMode, isSelected, 
       showAlert("success", "Task updated successfully");
       onTaskUpdate();
     } catch (error) {
-      showAlert("error", "Failed to update task");
+      showAlert("error", error.message);
     }
   };
 
