@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5173
 
 # 6. The command to start your frontend (might be 'npm run dev' depending on your setup)
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "dev","--", "--host"]
