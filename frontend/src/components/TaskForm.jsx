@@ -54,7 +54,7 @@ function TaskForm({ onTaskAdded, showAlert, token }) {
         tags: ""
       });
     } catch (error) {
-      showAlert("error", "Failed to add task");
+      showAlert("error", error.message);
     }
   };
 
@@ -63,8 +63,9 @@ function TaskForm({ onTaskAdded, showAlert, token }) {
       <h3><i className="fas fa-plus-circle"></i> Create New Task</h3>
       
       <div className="form-group">
-        <label>Title *</label>
+        <label for="titleInput">Title *</label>
         <input
+          id="titleInput"
           type="text"
           value={formData.title}
           onChange={(e) => setFormData({...formData, title: e.target.value})}
@@ -74,8 +75,9 @@ function TaskForm({ onTaskAdded, showAlert, token }) {
       </div>
 
       <div className="form-group">
-        <label>Description</label>
+        <label for="description">Description</label>
         <textarea
+          id="description"
           value={formData.description}
           onChange={(e) => setFormData({...formData, description: e.target.value})}
           placeholder="Enter task description"
@@ -85,8 +87,9 @@ function TaskForm({ onTaskAdded, showAlert, token }) {
 
       <div className="form-row">
         <div className="form-group">
-          <label>Due Date</label>
+          <label for="due">Due Date</label>
           <input
+            id="due"
             type="date"
             value={formData.dueDate}
             onChange={(e) => setFormData({...formData, dueDate: e.target.value})}
@@ -94,8 +97,9 @@ function TaskForm({ onTaskAdded, showAlert, token }) {
         </div>
 
         <div className="form-group">
-          <label>Priority</label>
+          <label for="priority">Priority</label>
           <select
+            id="priority"
             value={formData.priority}
             onChange={(e) => setFormData({...formData, priority: e.target.value})}
           >
@@ -108,8 +112,9 @@ function TaskForm({ onTaskAdded, showAlert, token }) {
 
       <div className="form-row">
         <div className="form-group">
-          <label>Category</label>
+          <label for="category">Category</label>
           <select
+            id="category"
             value={formData.category}
             onChange={(e) => setFormData({...formData, category: e.target.value})}
           >
@@ -120,8 +125,9 @@ function TaskForm({ onTaskAdded, showAlert, token }) {
         </div>
 
         <div className="form-group">
-          <label>Tags (comma-separated)</label>
+          <label for="tags">Tags (comma-separated)</label>
           <input
+            id="tags"
             type="text"
             value={formData.tags}
             onChange={(e) => setFormData({...formData, tags: e.target.value})}

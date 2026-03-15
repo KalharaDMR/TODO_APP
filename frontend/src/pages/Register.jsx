@@ -78,6 +78,8 @@ function Register() {
     setLoading(true);
 
     try {
+      console.log(formData.username)
+      console.log(formData.password)
       const res = await fetch("http://localhost:5000/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
