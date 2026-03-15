@@ -13,7 +13,7 @@ function TaskList({ tasks, onTaskUpdate, showAlert, token }) {
 
     try {
       await Promise.all(selectedTasks.map(id => 
-        fetch(`http://backend:5000/api/tasks/${id}`, {
+        fetch(`http://localhost:5000/api/tasks/${id}`, {
           method: "DELETE",
           headers: { Authorization: token },
         })
@@ -33,7 +33,7 @@ function TaskList({ tasks, onTaskUpdate, showAlert, token }) {
 
     try {
       await Promise.all(selectedTasks.map(id => 
-        fetch(`http://backend:5000/api/tasks/${id}`, {
+        fetch(`http://localhost:5000/api/tasks/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function TaskList({ tasks, onTaskUpdate, showAlert, token }) {
     if (!window.confirm("Delete all completed tasks?")) return;
 
     try {
-      const res = await fetch("http://backend:5000/api/tasks/completed/all", {
+      const res = await fetch("http://localhost:5000/api/tasks/completed/all", {
         method: "DELETE",
         headers: { Authorization: token },
       });

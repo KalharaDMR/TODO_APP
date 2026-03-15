@@ -32,7 +32,7 @@ function TaskItem({ task, onTaskUpdate, showAlert, token, bulkMode, isSelected, 
 
   const handleToggleComplete = async () => {
     try {
-      const res = await fetch(`http://backend:5000/api/tasks/${task.id}`, {
+      const res = await fetch(`http://localhost:5000/api/tasks/${task.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -53,7 +53,7 @@ function TaskItem({ task, onTaskUpdate, showAlert, token, bulkMode, isSelected, 
     if (!window.confirm("Are you sure you want to delete this task?")) return;
 
     try {
-      const res = await fetch(`http://backend:5000/api/tasks/${task.id}`, {
+      const res = await fetch(`http://localhost:5000/api/tasks/${task.id}`, {
         method: "DELETE",
         headers: { Authorization: token },
       });
@@ -69,7 +69,7 @@ function TaskItem({ task, onTaskUpdate, showAlert, token, bulkMode, isSelected, 
 
   const handleSaveEdit = async () => {
     try {
-      const res = await fetch(`http://backend:5000/api/tasks/${task.id}`, {
+      const res = await fetch(`http://localhost:5000/api/tasks/${task.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
